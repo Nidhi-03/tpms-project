@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training and Placement Cell Login</title>
+    <link rel="stylesheet" href="faculty.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <button class="button1" onclick="home()"><li><a href="home.html">Home</a></li></button>
+            <button class="button1" onclick="login()"><li><a href="login.html">Login</a></li></button>
+            <button class="button1" onclick="aboutus()"><li><a href="abtus.html">About Us</a></li></button>
+            <button class="button1" onclick="contactus()"><li><a href="cntus.html">Contact Us</a></li></button>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="form-container">
+            <div class="logo">
+                <img src="https://2.imimg.com/data2/EM/CW/MY-2533606/tplogo-250x250.gif" alt="Training and Placement Cell">
+            </div>
+            <form id="loginForm">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <p class="password-note">(eg: xyz@1234....)</p>
+
+                <div class="buttons">
+                    <button type="submit"onclick="okk()"><li><a href="okk.html">Ok</a></li></button>
+                    <button type="button" onclick="clearForm()"><li><a href="clear.html">Clear</a></li></button>
+                    <button type="button" onclick="exit()"><li><a href="exit.html">Exit</a></li></button>
+                </div>
+            </form>
+        </div>
+        <!-- <div class="image-container">
+            <img src="image.png" alt="Students">
+        </div> -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

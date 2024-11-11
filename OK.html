@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Registration</title>
+    <link rel="stylesheet" href="OK.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PLACEMENT COMPANY</h1>
+        <form id="companyForm">
+            <div class="form-group">
+                <label for="companyName">Company Name</label>
+                <input type="text" id="companyName" name="companyName">
+            </div>
+            <div class="form-group">
+                <label for="registrationNo">Registration No</label>
+                <input type="text" id="registrationNo" name="registrationNo">
+            </div>
+            <div class="form-group">
+                <label for="year">Year</label>
+                <input type="text" id="year" name="year">
+            </div>
+            <h3>Company Criteria</h3>
+            <div class="form-group">
+                <label for="tenth">10TH</label>
+                <input type="text" id="tenth" name="tenth" value="">
+            </div>
+            <div class="form-group">
+                <label for="twelfth">12TH</label>
+                <input type="text" id="twelfth" name="twelfth" value="">
+            </div>
+            <div class="form-group">
+                <label for="btech">B.Tech</label>
+                <input type="text" id="btech" name="btech">
+            </div>
+            <div class="form-group">
+                <label for="bca">BCA/B.Sc/BBA</label>
+                <input type="text" id="bca" name="bca" value="">
+            </div>
+            <div class="form-group">
+                <label for="mba">MBA</label>
+                <input type="text" id="mba" name="mba">
+            </div>
+            <div class="form-group">
+                <label for="mca">MCA</label>
+                <input type="text" id="mca" name="mca" value="">
+            </div>
+            <div class="button-group">
+                <button type="button" onclick="saveForm()">Save</button>
+                <button type="reset">Reset</button>
+                <button type="button" onclick="goBack()">Back</button>
+                <button type="button" onclick="exitPage()">Exit</button>
+            </div>
+        </form>
+        <!-- <div class="image-container">
+            <img src="building.jpg" alt="Company Building">
+        </div> -->
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Registration</title>
+    <link rel="stylesheet" href="okk.css">
+</head>
+<body>
+    <div class="registration-form">
+        <h1>FACULTY REGISTRATION</h1>
+        <form action="#" method="post">
+            <label for="teacher-id">Teacher ID</label>
+            <input type="text" id="teacher-id" name="teacher-id" value="c12412" required>
+            
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" value="Suresh Gupta" required>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" value="123reg1" required>
+            
+            <label for="department">Department Name</label>
+            <input type="text" id="department" name="department" value="mca" required>
+            
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender">
+                <option value="male" selected>Male</option>
+                <option value="female">Female</option>
+            </select>
+            
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" value="28" required>
+            
+            <label for="joining-date">Joining Date</label>
+            <input type="date" id="joining-date" name="joining-date" value="2011-06-29" required>
+
+            <div class="buttons">
+                <button type="submit">Save</button>
+                <button type="reset">Reset</button>
+                <button type="button" onclick="goBack()">Back</button>
+                <button type="button" onclick="exitPage()">Exit</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        function exitPage() {
+            window.close();
+        }
+    </script>
+</body>
+</html>

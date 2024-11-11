@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="addst.css">
+    <style>
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Student Registration</h2>
+        <form id="registrationForm">
+            <!-- Personal Information Section -->
+            <div class="form-group">
+                <label for="rollNo">Enter Student RollNo</label>
+                <input type="text" id="rollNo" name="rollNo" required>
+                <span class="error" id="rollNoError"></span>
+            </div>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <span class="error" id="nameError"></span>
+            </div>
+            <div class="form-group">
+                <label for="fatherName">Father's Name</label>
+                <input type="text" id="fatherName" name="fatherName" required>
+            </div>
+            <div class="form-group">
+                <label for="motherName">Mother's Name</label>
+                <input type="text" id="motherName" name="motherName" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label>Sex</label>
+                <input type="radio" id="male" name="sex" value="Male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="sex" value="Female" required>
+                <label for="female">Female</label>
+                <span class="error" id="sexError"></span>
+            </div>
+            <div class="form-group">
+                <label for="currentAddress">Current Address</label>
+                <input type="text" id="currentAddress" name="currentAddress" required>
+            </div>
+            <div class="form-group">
+                <label for="permanentAddress">Permanent Address</label>
+                <input type="text" id="permanentAddress" name="permanentAddress" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email ID</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error" id="emailError"></span>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+                <span class="error" id="phoneError"></span>
+            </div>
+            <div class="form-group full-width">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <span class="error" id="passwordError"></span>
+            </div>
+
+            <!-- Academic Information Section -->
+            <div class="form-group">
+                <label for="course">Course</label>
+                <select id="course" name="course">
+                    <option value="B.TECH">B.TECH</option>
+                    <option value="MBA">MBA</option>
+                    <option value="MCA">MCA</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="batchFrom">Batch From</label>
+                <select id="batchFrom" name="batchFrom">
+                    <option value="2010">2010</option>
+                    <option value="2011">2011</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="batchTo">Batch To</label>
+                <select id="batchTo" name="batchTo">
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="backlog">Backlog</label>
+                <input type="number" id="backlog" name="backlog" value="0">
+            </div>
+            <div class="form-group">
+                <label for="academicGap">Academic Gap</label>
+                <input type="number" id="academicGap" name="academicGap" value="0">
+            </div>
+
+            <!-- Academic Records Section -->
+            <h3>Class Details</h3>
+            <div class="form-group">
+                <label for="year10">Year of Passing (10th)</label>
+                <input type="number" id="year10" name="year10" value="2004">
+            </div>
+            <div class="form-group">
+                <label for="percentage10">Percentage (10th)</label>
+                <input type="number" id="percentage10" name="percentage10" value="66">
+            </div>
+            <div class="form-group">
+                <label for="year12">Year of Passing (12th)</label>
+                <input type="number" id="year12" name="year12" value="2006">
+            </div>
+            <div class="form-group">
+                <label for="percentage12">Percentage (12th)</label>
+                <input type="number" id="percentage12" name="percentage12" value="65">
+            </div>
+            <div class="form-group">
+                <label for="yearBtech">Year of Passing (B.Tech)</label>
+                <input type="number" id="yearBtech" name="yearBtech" value="2010">
+            </div>
+            <div class="form-group">
+                <label for="percentageBtech">Percentage (B.Tech)</label>
+                <input type="number" id="percentageBtech" name="percentageBtech" value="68">
+            </div>
+
+            <!-- Buttons Section -->
+            <div class="form-actions full-width">
+                <button type="submit">OK</button>
+                <button type="reset">Clear</button>
+                <button type="button" onclick="history.back()">Back</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript Form Validation
+        document.getElementById("registrationForm").onsubmit = function (event) {
+            var isValid = true;
+
+            // RollNo Validation
+            var rollNo = document.getElementById("rollNo");
+            if (rollNo.value.trim() === "") {
+                isValid = false;
+                document.getElementById("rollNoError").textContent = "Roll number is required!";
+            } else {
+                document.getElementById("rollNoError").textContent = "";
+            }
+
+            // Name Validation
+            var name = document.getElementById("name");
+            if (name.value.trim() === "") {
+                isValid = false;
+                document.getElementById("nameError").textContent = "Name is required!";
+            } else {
+                document.getElementById("nameError").textContent = "";
+            }
+
+            // Email Validation
+            var email = document.getElementById("email");
+            var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (!email.value.match(emailPattern)) {
+                isValid = false;
+                document.getElementById("emailError").textContent = "Enter a
